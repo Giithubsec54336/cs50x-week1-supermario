@@ -1,0 +1,38 @@
+#include<cs50.h>
+#include<stdio.h>
+
+int main(void)
+{
+    int height;
+    do
+    {
+        height = get_int("what's your height?");//get height
+    }
+    while(height > 8 || height <= 0);
+
+    for(int i = 0 ;i < height ;i++)
+    {
+        for(int j = 0 ;j < height - i + 1 ;j++)
+        {
+            printf(" ");
+        }
+        for(int k = 0 ;k < i + 1 ;k++)
+        {
+            printf("#");
+        }
+        for(int l = 0 ;l < 2 ;l++)
+        {
+            printf(" ");
+        }
+        for(int m = 0 ;m < i + 1 ;m++)
+        {
+            printf("#");
+        }
+        for(int n = 0 ;n < height - i + 1 ;n++)
+        {
+            printf(" ");
+        }
+        printf("\n");
+    }
+
+}
